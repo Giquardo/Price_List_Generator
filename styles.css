@@ -63,6 +63,21 @@ header {
     padding: 16px;
 }
 
+/* Category Colors (Repeats Every 4 Categories) */
+.light-mode .category:nth-child(4n+1) { background-color: #00aeef; }
+.light-mode .category:nth-child(4n+2) { background-color: #ec008c; }
+.light-mode .category:nth-child(4n+3) { background-color: #7ac143; }
+.light-mode .category:nth-child(4n+4) { background-color: #f47b20; } 
+/* Dark Mode Adjustments */
+.dark-mode .category:nth-child(4n+1) { background-color: #00aeef; }
+.dark-mode .category:nth-child(4n+2) { background-color: #ec008c; }
+.dark-mode .category:nth-child(4n+3) { background-color: #7ac143; }
+.dark-mode .category:nth-child(4n+4) { background-color: #f47b20; }
+
+.dark-mode .category {
+    filter: saturate(80%);
+}
+
 .category {
     padding: 16px;
     border-radius: 16px;
@@ -84,7 +99,7 @@ header {
 /* Dark Mode Category Colors */
 .dark-mode .category {
     background-color: #444444;
-    color: #f4f4f4;
+    color: #222222;
 }
 
 /* Drink Item Styling */
