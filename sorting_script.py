@@ -16,4 +16,4 @@ def sort_drinks(input_file, output_file):
         json.dump(sorted_data, file, indent=4)
 
 # Example usage
-sort_drinks('drinks.json', 'sorted_drinks.json')
+sort_drinks('list.json', 'sorted_list.json')

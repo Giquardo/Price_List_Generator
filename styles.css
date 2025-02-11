@@ -1,54 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Kelson+Sans:wght@400;700&family=Lato:wght@300;400;700&display=swap');
 
-
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h1, h2, h3 {
-    font-family: 'Kelson Sans', sans-serif;
+/* Light Mode */
+.light-mode {
+    background-color: #f4f4f4;
+    color: #000000;
 }
 
+/* Dark Mode */
+.dark-mode {
+    background-color: #222222;
+    color: #f4f4f4;
+}
+
+/* Automatic detection */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222222;
+        color: #f4f4f4;
+    }
+}
+
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Adjust space between logo and text */
+    gap: 8px;
+    padding: 8px 16px;
+    position: relative;
 }
 
+/* Toggle Button */
+.toggle-theme {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Logo */
 .esn-logo {
-    height: 50px; /* Adjust size as needed */
+    height: 48px;
     width: auto;
 }
 
-
-.drink-container {
+/* Drink Categories */
+.container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
+    padding: 16px;
 }
 
-.drink-category {
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
+.category {
+    padding: 16px;
+    border-radius: 16px;
+    color: f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.drink-category h2 {
-    margin-top: 0;
+/* Centering Category Titles */
+.category h2 {
     text-align: center;
 }
 
-.drink-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
+/* Light Mode Category Colors */
+.light-mode .category {
+    background-color: #e0e0e0;
+    color: #f4f4f4;
 }
 
-.drink-item span {
+/* Dark Mode Category Colors */
+.dark-mode .category {
+    background-color: #444444;
+    color: #f4f4f4;
+}
+
+/* Drink Item Styling */
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.item span {
     font-weight: bold;
 }

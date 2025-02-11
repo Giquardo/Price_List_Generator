@@ -2,10 +2,10 @@
 const categoryColours = ["#00aeef", "#ec008c", "#7ac143", "#f47b20"];
 
 // Load JSON data
-fetch('sorted_drinks.json')
+fetch('sorted_list.json')
     .then(response => response.json())
     .then(data => {
-        const drinkContainer = document.getElementById('drink-container');
+        const drinkContainer = document.getElementById('container');
         let colourIndex = 0;
 
         // Iterate through categories in JSON
@@ -27,7 +27,7 @@ fetch('sorted_drinks.json')
 // Function to create category box
 function createCategoryBox(category, items, colour) {
     const box = document.createElement('div');
-    box.classList.add('drink-category');
+    box.classList.add('category');
     box.style.backgroundColor = colour;
 
     const title = document.createElement('h2');
@@ -36,7 +36,7 @@ function createCategoryBox(category, items, colour) {
 
     items.forEach(item => {
         const itemDiv = document.createElement('div');
-        itemDiv.classList.add('drink-item');
+        itemDiv.classList.add('item');
 
         const name = document.createElement('span');
         name.textContent = item.name;
@@ -51,3 +51,46 @@ function createCategoryBox(category, items, colour) {
 
     return box;
 }
+
+// Theme Toggle Logic
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const header = document.querySelector("header");
+
+    // Create the toggle button
+    const toggleBtn = document.createElement("span");
+    toggleBtn.classList.add("material-symbols-outlined", "toggle-theme");
+    toggleBtn.textContent = "dark_mode"; // Default icon
+
+    header.appendChild(toggleBtn);
+
+    // Function to set the theme
+    function setTheme(mode) {
+        if (mode === "dark") {
+            body.classList.add("dark-mode");
+            body.classList.remove("light-mode");
+            toggleBtn.textContent = "light_mode"; // Change icon to sun
+        } else {
+            body.classList.add("light-mode");
+            body.classList.remove("dark-mode");
+            toggleBtn.textContent = "dark_mode"; // Change icon to moon
+        }
+        localStorage.setItem("theme", mode);
+    }
+
+    // Check system preference and localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+    } else {
+        setTheme("light");
+    }
+
+    // Toggle theme on button click
+    toggleBtn.addEventListener("click", () => {
+        const newTheme = body.classList.contains("dark-mode") ? "light" : "dark";
+        setTheme(newTheme);
+    });
+});
