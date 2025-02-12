@@ -13,14 +13,18 @@
             "price": 4.5
         },
         {
-            "name": "Heineken",
+            "name": "Heinekens",
             "price": 4.0
         }
     ],
     "Soft Drinks": [
         {
-            "name": "Coca-Cola",
+            "name": "Bitter Lemon",
             "price": 2.5
+        },
+        {
+            "name": "Coca-Cola",
+            "price": 3.0
         },
         {
             "name": "Fanta",
