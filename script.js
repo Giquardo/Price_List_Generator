@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create the toggle button
     const toggleBtn = document.createElement("span");
     toggleBtn.classList.add("material-symbols-outlined", "toggle-theme");
-    toggleBtn.textContent = "dark_mode"; // Default icon
-
     header.appendChild(toggleBtn);
 
     // Function to set the theme
-    function setTheme(mode) {
+    function setTheme(mode, from = "default") {
+        console.log(`🎨 Applying theme: ${mode} (Triggered by: ${from})`);
+        
         if (mode === "dark") {
             body.classList.add("dark-mode");
             body.classList.remove("light-mode");
@@ -68,22 +68,30 @@ document.addEventListener("DOMContentLoaded", () => {
             body.classList.remove("dark-mode");
             toggleBtn.textContent = "dark_mode"; // Change icon to moon
         }
+
         localStorage.setItem("theme", mode);
     }
 
     // Check system preference and localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        setTheme("dark");
-    } else {
-        setTheme("light");
+    let savedTheme = localStorage.getItem("theme");
+
+    if (!savedTheme) {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        savedTheme = prefersDark ? "dark" : "light";
+        localStorage.setItem("theme", savedTheme);
     }
+
+    setTheme(savedTheme, "initial load");
 
     // Toggle theme on button click
     toggleBtn.addEventListener("click", () => {
         const newTheme = body.classList.contains("dark-mode") ? "light" : "dark";
-        setTheme(newTheme);
+        setTheme(newTheme, "user toggle");
+    });
+
+    // Listen for system preference changes
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        const newSystemTheme = event.matches ? "dark" : "light";
+        setTheme(newSystemTheme, "system preference change");
     });
 });
