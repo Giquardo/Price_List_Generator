@@ -20,7 +20,7 @@
     "Soft Drinks": [
         {
             "name": "Coca-Cola",
-            "price": 2.50
+            "price": 3.00
         },
         {
             "name": "Fanta",
@@ -52,8 +52,7 @@
             "name": "Apple",
             "price": 1.00
         },
-        {
-            "name": "Cactus",
+        {            "name": "Cactus",
             "price": 1.00
         },
         {
