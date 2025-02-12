@@ -3,8 +3,11 @@ name: Auto-Sort Drink List
 on:
   push:
     paths:
-      - 'list.json'  # Trigger workflow only when list.json changes
+      - 'list.json'  # Trigger workflow when list.json changes
   workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write  # ✅ Give the workflow permission to push changes
 
 jobs:
   sort_list:
@@ -14,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Authenticate GitHub Actions
+          token: ${{ secrets.GITHUB_TOKEN }}  # ✅ Authenticate with GitHub
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -26,9 +29,9 @@ jobs:
 
       - name: Commit and Push Changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Authenticate push
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # ✅ Authenticate push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions@github.com"
           git add sorted_list.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sorted drink list [GitHub Actions]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sorted drink list [GitHub Actions]" && git push origin main)
