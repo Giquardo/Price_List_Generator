@@ -41,6 +41,10 @@
         {
             "name": "Ginger Ale",
             "price": 2.50
+        },
+        {
+            "name": "Bitter Lemon",
+            "price": 2.50
         }
     ],
     "Jenever Shots": [
