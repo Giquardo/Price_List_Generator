@@ -19,9 +19,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Dependencies
-        run: pip install json
-
       - name: Run Sorting Script
         run: python sorting_script.py
 
