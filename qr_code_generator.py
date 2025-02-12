@@ -1,7 +1,7 @@
 import qrcode
 
 # URL to be encoded
-url = 'https://gorgeous-paprenjak-7c8e46.netlify.app'
+url = 'https://esnleonardopricelist.netlify.app'
 
 # Generate QR Code
 img = qrcode.make(url)
