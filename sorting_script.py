@@ -18,11 +18,11 @@ def sort_drinks(input_file, output_file):
 # Example usage
 sort_drinks('list.json', 'sorted_list.json')
 
-# URL to be encoded
-url = 'https://gorgeous-paprenjak-7c8e46.netlify.app'
+# # URL to be encoded
+# url = 'https://gorgeous-paprenjak-7c8e46.netlify.app'
 
-# Generate QR Code
-img = qrcode.make(url)
+# # Generate QR Code
+# img = qrcode.make(url)
 
-# Save the QR Code
-img.save('PriceListQRCode.jpg')
+# # Save the QR Code
+# img.save('PriceListQRCode.jpg')

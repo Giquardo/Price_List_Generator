@@ -1,67 +1,40 @@
 {
+    "Cups": [
+        {
+            "name": "Cup",
+            "price": 1.00
+        },
+        {
+            "name": "Return Cup",
+            "price": 1.00
+        }
+    ],
     "Alcoholic Beverages": [
         {
-            "name": "Heinekens",
-            "price": 4.00
-        },
-        {
-            "name": "Cherry Beer",
-            "price": 4.50
-        },
-        {
-            "name": "Cuberdon Beer",
-            "price": 4.50
-        },
-        {
-            "name": "Cactus Beer",
-            "price": 4.50
+            "name": "Beer",
+            "price": 1.50
         }
     ],
     "Soft Drinks": [
         {
             "name": "Coca-Cola",
-            "price": 3.00
+            "price": 1.50
         },
         {
-            "name": "Fanta",
-            "price": 2.50
+            "name": "Coca-Cola Zero",
+            "price": 1.50
         },
         {
             "name": "Sprite",
-            "price": 2.50
+            "price": 1.50
         },
         {
             "name": "Ice Tea",
-            "price": 2.50
+            "price": 1.50
         },
         {
-            "name": "Tonic",
-            "price": 2.50
-        },
-        {
-            "name": "Ginger Ale",
-            "price": 2.50
-        },
-        {
-            "name": "Bitter Lemon",
-            "price": 2.50
-        }
-    ],
-    "Jenever Shots": [
-        {
-            "name": "Apple",
-            "price": 1.00
-        },
-        {            "name": "Cactus",
-            "price": 1.00
-        },
-        {
-            "name": "Cherry",
-            "price": 1.00
-        },
-        {
-            "name": "Cuberdon",
-            "price": 1.00
+            "name": "Fanta",
+            "price": 1.50
         }
     ],
     "Spritz": [
@@ -72,55 +45,23 @@
         {
             "name": "Passion Fruit",
             "price": 2.00
-        },
-        {
-            "name": "Strawberry",
-            "price": 2.00
-        },
-        {
-            "name": "Peach",
-            "price": 2.00
-        },
-        {
-            "name": "Mango",
-            "price": 2.00
-        },
-        {
-            "name": "Lemon",
-            "price": 2.00
-        },
-        {
-            "name": "Raspberry",
-            "price": 2.00
         }
     ],
     "Energy Drinks": [
         {
             "name": "Red Bull",
-            "price": 3.00
+            "price": 2.00
         },
         {
-            "name": "Monster",
-            "price": 3.00
+            "name": "Red Bull Sugar Free",
+            "price": 2.00
         },
         {
-            "name": "Rockstar",
-            "price": 3.00
+            "name": "Red Bull Red Edition",
+            "price": 2.00
         },
         {
-            "name": "Burn",
-            "price": 3.00
-        },
-        {
-            "name": "Dark Dog",
-            "price": 3.00
-        },
-        {
-            "name": "Nalu",
-            "price": 3.00
-        },
-        {
-            "name": "Toro",
+            "name": "Red Bull Green Edition",
             "price": 3.00
         }
     ]
