@@ -15,7 +15,7 @@ This project is a **dynamic list generator** for the **ESN Bar**, created by **E
 
 ## 💂️ Project Structure
 ```
-├── Price_List.html      # Main HTML file
+├── index.html      # Main HTML file
 ├── list.json            # Original unsorted list in JSON format
 ├── ESN_logo.svg         # ESN star logo
 ├── PriceListQRCode.jpg  # Auto-generated QR code for quick access
@@ -35,7 +35,7 @@ cd your-repository
 ```
 
 ### 2️⃣ Open in Browser
-Simply open `Price_List.html` in any modern web browser.
+Simply open `index.html` in any modern web browser.
 
 ### 3️⃣ Modify the Drink List
 - Update `list.json` to add, remove, or modify drinks.
@@ -45,6 +45,13 @@ Simply open `Price_List.html` in any modern web browser.
 ### 4️⃣ Generate a QR Code
  - Run `qr_code_generator.py` to generate a QR code for the drink list.
  - This will create `PriceListQRCode.jpg`, which can be shared digitally or printed.
+ 
+### 5️⃣ Run Tests
+To verify that the drinks are sorted correctly, execute the test suite:
+
+```
+pytest
+```
 
 ## 🛠 Customisation
 - To modify styling, edit `styles.css`.

@@ -6,12 +6,16 @@
         },
         {
             "name": "Return Cup",
-            "price": 1.00
+            "price": -1.00
         }
     ],
     "Alcoholic Beverages": [
         {
             "name": "Beer",
+            "price": 1.50
+        },
+        {
+            "name": "Cherry beer",
             "price": 1.50
         }
     ],
@@ -25,10 +29,6 @@
             "price": 1.50
         },
         {
-            "name": "Sprite",
-            "price": 1.50
-        },
-        {
             "name": "Ice Tea",
             "price": 1.50
         },
@@ -37,32 +37,23 @@
             "price": 1.50
         }
     ],
-    "Spritz": [
-        {
-            "name": "Green Apple",
-            "price": 2.00
-        },
-        {
-            "name": "Passion Fruit",
-            "price": 2.00
-        }
-    ],
+
     "Energy Drinks": [
         {
             "name": "Red Bull",
-            "price": 2.00
+            "price": 1.50
         },
         {
             "name": "Red Bull Sugar Free",
-            "price": 2.00
+            "price": 1.50
         },
         {
             "name": "Red Bull Red Edition",
-            "price": 2.00
+            "price": 1.50
         },
         {
             "name": "Red Bull Green Edition",
-            "price": 3.00
+            "price": 1.50
         }
     ]
 }

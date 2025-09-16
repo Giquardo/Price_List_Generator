@@ -1,4 +1,10 @@
 {
+    "Alcoholic Beverages": [
+        {
+            "name": "Beer",
+            "price": 1.5
+        }
+    ],
     "Cups": [
         {
             "name": "Cup",
@@ -9,10 +15,22 @@
             "price": 1.0
         }
     ],
-    "Alcoholic Beverages": [
+    "Energy Drinks": [
         {
-            "name": "Beer",
-            "price": 1.5
+            "name": "Red Bull",
+            "price": 2.0
+        },
+        {
+            "name": "Red Bull Green Edition",
+            "price": 3.0
+        },
+        {
+            "name": "Red Bull Red Edition",
+            "price": 2.0
+        },
+        {
+            "name": "Red Bull Sugar Free",
+            "price": 2.0
         }
     ],
     "Soft Drinks": [
@@ -44,24 +62,6 @@
         },
         {
             "name": "Passion Fruit",
-            "price": 2.0
-        }
-    ],
-    "Energy Drinks": [
-        {
-            "name": "Red Bull",
-            "price": 2.0
-        },
-        {
-            "name": "Red Bull Green Edition",
-            "price": 3.0
-        },
-        {
-            "name": "Red Bull Red Edition",
-            "price": 2.0
-        },
-        {
-            "name": "Red Bull Sugar Free",
             "price": 2.0
         }
     ]

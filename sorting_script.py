@@ -1,28 +1,35 @@
 import json
 
-# Function to sort the drinks alphabetically
-def sort_drinks(input_file, output_file):
-    with open(input_file, 'r') as file:
+def sort_drinks(input_file: str, output_file: str) -> None:
+    """Sort drinks within categories and alphabetize categories.
+
+    Parameters
+    ----------
+    input_file: str
+        Path to the JSON file containing the drinks.
+    output_file: str
+        Path where the sorted JSON should be written.
+    """
+    with open(input_file, "r") as file:
         drinks_data = json.load(file)
 
-    # Sort drinks within each category
     sorted_data = {
-        category: sorted(items, key=lambda x: x['name'])
-        for category, items in drinks_data.items()
-    }
-
-    # Save the sorted data back to a file
-    with open(output_file, 'w') as file:
+            category: sorted(items, key=lambda x: x["name"])
+            for category, items in sorted(
+                drinks_data.items(), key=lambda item: item[0].lower()
+            )
+        }
+    with open(output_file, "w") as file:
         json.dump(sorted_data, file, indent=4)
 
-# Example usage
-sort_drinks('list.json', 'sorted_list.json')
+if __name__ == "__main__":
+    sort_drinks("list.json", "sorted_list.json")
 
-# # URL to be encoded
+# URL to be encoded
 # url = 'https://gorgeous-paprenjak-7c8e46.netlify.app'
 
-# # Generate QR Code
+# Generate QR Code
 # img = qrcode.make(url)
 
-# # Save the QR Code
+# Save the QR Code
 # img.save('PriceListQRCode.jpg')

@@ -81,7 +81,7 @@ header {
 .category {
     padding: 16px;
     border-radius: 16px;
-    color: f4f4f4;
+    color: #f4f4f4;
     transition: background-color 0.3s, color 0.3s;
 }
 
