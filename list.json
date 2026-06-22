@@ -35,9 +35,12 @@
         {
             "name": "Fanta",
             "price": 1.50
+        },
+        {
+            "name": "Sprite",
+            "price": 1.50
         }
     ],
-
     "Energy Drinks": [
         {
             "name": "Red Bull",
@@ -50,10 +53,40 @@
         {
             "name": "Red Bull Red Edition",
             "price": 1.50
+        }
+    ],
+    "Food": [
+        {
+            "name": "Croque Monsieur",
+            "price": 1.50
         },
         {
-            "name": "Red Bull Green Edition",
+            "name": "Chips Paprika",
             "price": 1.50
+        },
+        {
+            "name": "Chips Natural",
+            "price": 1.50
+        },
+        {
+            "name": "Chips Pickles",
+            "price": 1.50
+        },
+        {
+            "name": "Noodles",
+            "price": 2.00
+        },
+        {
+            "name": "Bifi",
+            "price": 1.00
+        },
+        {
+            "name": "Banana",
+            "price": 1.00
+        },
+        {
+            "name": "Apple",
+            "price": 1.00
         }
     ]
 }

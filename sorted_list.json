@@ -25,16 +25,46 @@
             "price": 1.5
         },
         {
-            "name": "Red Bull Green Edition",
-            "price": 1.5
-        },
-        {
             "name": "Red Bull Red Edition",
             "price": 1.5
         },
         {
             "name": "Red Bull Sugar Free",
             "price": 1.5
+        }
+    ],
+    "Food": [
+        {
+            "name": "Apple",
+            "price": 1.0
+        },
+        {
+            "name": "Banana",
+            "price": 1.0
+        },
+        {
+            "name": "Bifi",
+            "price": 1.0
+        },
+        {
+            "name": "Chips Natural",
+            "price": 1.5
+        },
+        {
+            "name": "Chips Paprika",
+            "price": 1.5
+        },
+        {
+            "name": "Chips Pickles",
+            "price": 1.5
+        },
+        {
+            "name": "Croque Monsieur",
+            "price": 1.5
+        },
+        {
+            "name": "Noodles",
+            "price": 2.0
         }
     ],
     "Soft Drinks": [
@@ -52,6 +82,10 @@
         },
         {
             "name": "Ice Tea",
+            "price": 1.5
+        },
+        {
+            "name": "Sprite",
             "price": 1.5
         }
     ]
